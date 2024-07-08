@@ -8,10 +8,10 @@ import cors from "cors";
 
 export const app = express();
 
-config({
-  path: "./data/config.env",
-});
-
+// config({
+//   path: "./data/config.env",
+// });
+config();
 // Using Middlewares
 app.use(express.json());
 app.use(cookieParser());
@@ -28,7 +28,7 @@ app.use("/api/v1/users", userRouter);
 app.use("/api/v1/task", taskRouter);
 
 app.get("/", (req, res) => {
-  res.send("server working");
+  res.send("server workingggg");
 });
 
 // Using Error Middleware
